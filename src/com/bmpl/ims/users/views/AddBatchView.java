@@ -204,6 +204,7 @@ public class AddBatchView extends JFrame {
 			boolean isaddbatch = batchdao.addbatch(batchdto);
 			if (isaddbatch) {
 				JOptionPane.showMessageDialog(this, "Batch Added........");
+				frame.setVisible(false);
 			} else {
 				JOptionPane.showMessageDialog(this, "Invalid Userid or Password");
 			}

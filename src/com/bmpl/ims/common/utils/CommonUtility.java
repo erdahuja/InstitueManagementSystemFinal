@@ -18,12 +18,5 @@ public class CommonUtility {
 
 	}
 
-	public static String getBalance(String sum) {
-		String sq = CommonSQLConstants.SUMOFPAYMENTS_SQL;
-		int newTotal = Integer.parseInt(sum) - Integer.parseInt(sq);
-		String nwtotal = String.valueOf(newTotal);
-
-		return nwtotal;
-	}
 
 }

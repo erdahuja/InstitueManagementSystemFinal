@@ -58,18 +58,17 @@ public class TrainerRegistration extends JFrame {
 	private static JLabel l7;
 	private static JLabel l8;
 	private static JLabel l9;
-	private static TrainerRegistration frame;
 	private static JLabel lblImage;
 	private static JDatePickerImpl datePicker;
 	private static Date selectedDate;
 	private static JButton btnSubmit;
 	private TrainerDTO trainer = new TrainerDTO();
+	JFrame frame = new JFrame();
 
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException, UnsupportedLookAndFeelException {
 
-		frame = new TrainerRegistration();
-		frame.setVisible(true);
+		new TrainerRegistration();
 
 	}
 
@@ -91,13 +90,13 @@ public class TrainerRegistration extends JFrame {
 			}
 		});
 
-		setFont(new Font("Apple Garamond", Font.BOLD | Font.ITALIC, 20));
-		setTitle("Trainer Registration");
-		getContentPane().setBackground(new Color(135, 206, 250));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(380, 100, 586, 500);
-		this.getContentPane().setLayout(null);
-
+		frame.setFont(new Font("Apple Garamond", Font.BOLD | Font.ITALIC, 20));
+		frame.setTitle("Trainer Registration");
+		frame.getContentPane().setBackground(new Color(135, 206, 250));
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(380, 100, 586, 500);
+		frame.setLayout(null);
+		
 		JLabel lblTrainerName = new JLabel("Trainer Name");
 		lblTrainerName.setBounds(35, 68, 95, 15);
 		getContentPane().add(lblTrainerName);
@@ -296,6 +295,8 @@ public class TrainerRegistration extends JFrame {
 		getContentPane().add(l9);
 
 		UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		frame.setContentPane(getContentPane());
+		frame.setVisible(true);
 	}
 
 	public ImageIcon ResizeImage(String path) {

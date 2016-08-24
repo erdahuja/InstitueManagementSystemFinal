@@ -38,19 +38,20 @@ public class VisitAttendanceView extends JFrame {
 	DefaultListModel<String> listModel1 = new DefaultListModel<>();
 
 	ArrayList<String> studentlist = null;
+	JFrame frame = new JFrame();
 
 	public static void main(String[] args) {
 
-		VisitAttendanceView frame = new VisitAttendanceView();
-		frame.setVisible(true);
+		new VisitAttendanceView();
+	
 
 	}
 
 	public VisitAttendanceView() {
 		lblStudnetname.setVisible(false);
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 555, 410);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(100, 100, 555, 410);
 		getContentPane().setLayout(null);
 
 		JLabel lblBatchname = new JLabel("BatchName");
@@ -129,6 +130,10 @@ public class VisitAttendanceView extends JFrame {
 		list_1.setBackground(SystemColor.control);
 		list_1.setBounds(97, 217, 370, 143);
 		getContentPane().add(list_1);
+		
+		
+		frame.setVisible(true);
+		frame.setContentPane(getContentPane());
 
 	}
 

@@ -156,7 +156,7 @@ public class DashBoardView extends JFrame {
 
 		model3 = new Vector();
 		model3.addElement(new Item("TakeAttendanceView", "Take Attendance"));
-		model3.addElement(new Item("AddBatchView", "View Attendance"));
+		model3.addElement(new Item("VisitAttendanceView", "View Attendance"));
 
 		JComboBox comboBox_2 = new JComboBox(model3);
 		comboBox_2.setBounds(299, 406, 124, 24);
